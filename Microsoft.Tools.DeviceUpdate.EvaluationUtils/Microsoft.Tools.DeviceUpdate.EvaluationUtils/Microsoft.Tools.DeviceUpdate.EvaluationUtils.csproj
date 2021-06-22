@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{699B8C37-C10A-4ECE-B666-F3D403C2A035}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Tools.DeviceUpdate.EvaluationUtils</RootNamespace>
+    <AssemblyName>Microsoft.Tools.DeviceUpdate.EvaluationUtils</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CabApiWrapper">
+      <HintPath>..\..\..\..\Users\Empyreal96\Desktop\SSD\otcupdater\CabApiWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="PkgCommonManaged">
+      <HintPath>..\..\..\..\Users\Empyreal96\Desktop\SSD\otcupdater\PkgCommonManaged.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientWebService\ArrayOfBase64Binary.cs" />
+    <Compile Include="ClientWebService\ArrayOfGuid.cs" />
+    <Compile Include="ClientWebService\ArrayOfInt.cs" />
+    <Compile Include="ClientWebService\ArrayOfString.cs" />
+    <Compile Include="ClientWebService\ArrayOfUpdateData.cs" />
+    <Compile Include="ClientWebService\AuthorizationCookie.cs" />
+    <Compile Include="ClientWebService\AuthPlugInInfo.cs" />
+    <Compile Include="ClientWebService\CategoryIdentifier.cs" />
+    <Compile Include="ClientWebService\CategoryRelationship.cs" />
+    <Compile Include="ClientWebService\ClientSoap.cs" />
+    <Compile Include="ClientWebService\ClientSoapChannel.cs" />
+    <Compile Include="ClientWebService\ClientSoapClient.cs" />
+    <Compile Include="ClientWebService\ComputerHardwareSpecification.cs" />
+    <Compile Include="ClientWebService\ComputerInfo.cs" />
+    <Compile Include="ClientWebService\Config.cs" />
+    <Compile Include="ClientWebService\ConfigurationProperty.cs" />
+    <Compile Include="ClientWebService\Cookie.cs" />
+    <Compile Include="ClientWebService\Deployment.cs" />
+    <Compile Include="ClientWebService\DeploymentAction.cs" />
+    <Compile Include="ClientWebService\Device.cs" />
+    <Compile Include="ClientWebService\ExtendedUpdateInfo.cs" />
+    <Compile Include="ClientWebService\ExtendedUpdateInfo2.cs" />
+    <Compile Include="ClientWebService\FileDecryption.cs" />
+    <Compile Include="ClientWebService\FileDecryption2.cs" />
+    <Compile Include="ClientWebService\FileLocation.cs" />
+    <Compile Include="ClientWebService\GetConfigRequest.cs" />
+    <Compile Include="ClientWebService\GetConfigRequestBody.cs" />
+    <Compile Include="ClientWebService\GetConfigResponse.cs" />
+    <Compile Include="ClientWebService\GetConfigResponseBody.cs" />
+    <Compile Include="ClientWebService\GetCookieRequest.cs" />
+    <Compile Include="ClientWebService\GetCookieRequestBody.cs" />
+    <Compile Include="ClientWebService\GetCookieResponse.cs" />
+    <Compile Include="ClientWebService\GetCookieResponseBody.cs" />
+    <Compile Include="ClientWebService\GetExtendedUpdateInfo2Request.cs" />
+    <Compile Include="ClientWebService\GetExtendedUpdateInfo2RequestBody.cs" />
+    <Compile Include="ClientWebService\GetExtendedUpdateInfo2Response.cs" />
+    <Compile Include="ClientWebService\GetExtendedUpdateInfo2ResponseBody.cs" />
+    <Compile Include="ClientWebService\GetExtendedUpdateInfoRequest.cs" />
+    <Compile Include="ClientWebService\GetExtendedUpdateInfoRequestBody.cs" />
+    <Compile Include="ClientWebService\GetExtendedUpdateInfoResponse.cs" />
+    <Compile Include="ClientWebService\GetExtendedUpdateInfoResponseBody.cs" />
+    <Compile Include="ClientWebService\GetFileLocationsRequest.cs" />
+    <Compile Include="ClientWebService\GetFileLocationsRequestBody.cs" />
+    <Compile Include="ClientWebService\GetFileLocationsResponse.cs" />
+    <Compile Include="ClientWebService\GetFileLocationsResponseBody.cs" />
+    <Compile Include="ClientWebService\GetFileLocationsResults.cs" />
+    <Compile Include="ClientWebService\InstalledDriver.cs" />
+    <Compile Include="ClientWebService\RefreshCacheRequest.cs" />
+    <Compile Include="ClientWebService\RefreshCacheRequestBody.cs" />
+    <Compile Include="ClientWebService\RefreshCacheResponse.cs" />
+    <Compile Include="ClientWebService\RefreshCacheResponseBody.cs" />
+    <Compile Include="ClientWebService\RefreshCacheResult.cs" />
+    <Compile Include="ClientWebService\RegisterComputerRequest.cs" />
+    <Compile Include="ClientWebService\RegisterComputerRequestBody.cs" />
+    <Compile Include="ClientWebService\RegisterComputerResponse.cs" />
+    <Compile Include="ClientWebService\RegisterComputerResponseBody.cs" />
+    <Compile Include="ClientWebService\StartCategoryScanRequest.cs" />
+    <Compile Include="ClientWebService\StartCategoryScanRequestBody.cs" />
+    <Compile Include="ClientWebService\StartCategoryScanResponse.cs" />
+    <Compile Include="ClientWebService\StartCategoryScanResponseBody.cs" />
+    <Compile Include="ClientWebService\SyncInfo.cs" />
+    <Compile Include="ClientWebService\SyncPrinterCatalogRequest.cs" />
+    <Compile Include="ClientWebService\SyncPrinterCatalogRequestBody.cs" />
+    <Compile Include="ClientWebService\SyncPrinterCatalogResponse.cs" />
+    <Compile Include="ClientWebService\SyncPrinterCatalogResponseBody.cs" />
+    <Compile Include="ClientWebService\SyncUpdateParameters.cs" />
+    <Compile Include="ClientWebService\SyncUpdatesRequest.cs" />
+    <Compile Include="ClientWebService\SyncUpdatesRequestBody.cs" />
+    <Compile Include="ClientWebService\SyncUpdatesResponse.cs" />
+    <Compile Include="ClientWebService\SyncUpdatesResponseBody.cs" />
+    <Compile Include="ClientWebService\UpdateData.cs" />
+    <Compile Include="ClientWebService\UpdateIdentity.cs" />
+    <Compile Include="ClientWebService\UpdateInfo.cs" />
+    <Compile Include="ClientWebService\UpdateReportingSampleRate.cs" />
+    <Compile Include="ClientWebService\XmlUpdateFragmentType.cs" />
+    <Compile Include="DeviceInfoFromCab.cs" />
+    <Compile Include="DownloadInfo.cs" />
+    <Compile Include="EvaluationResult.cs" />
+    <Compile Include="Evaluator.cs" />
+    <Compile Include="HttpDownloader.cs" />
+    <Compile Include="IDeviceInfoProvider.cs" />
+    <Compile Include="IDownloader.cs" />
+    <Compile Include="InstalledPackageInfo.cs" />
+    <Compile Include="IUpdateEvaluator.cs" />
+    <Compile Include="PackageDownloader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedirCabDownloader.cs" />
+    <Compile Include="SimpleAuthWebService\AuthorizationCookie.cs" />
+    <Compile Include="SimpleAuthWebService\GetAuthorizationCookieRequest.cs" />
+    <Compile Include="SimpleAuthWebService\GetAuthorizationCookieRequestBody.cs" />
+    <Compile Include="SimpleAuthWebService\GetAuthorizationCookieResponse.cs" />
+    <Compile Include="SimpleAuthWebService\GetAuthorizationCookieResponseBody.cs" />
+    <Compile Include="SimpleAuthWebService\SimpleAuthSoap.cs" />
+    <Compile Include="SimpleAuthWebService\SimpleAuthSoapChannel.cs" />
+    <Compile Include="SimpleAuthWebService\SimpleAuthSoapClient.cs" />
+    <Compile Include="SLSDownloader.cs" />
+    <Compile Include="UpdateScanner.cs" />
+    <Compile Include="UpdateScannerUUP.cs" />
+    <Compile Include="UpdateXmlNamespaceManager.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
